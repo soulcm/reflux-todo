@@ -3,6 +3,12 @@ var React = require('react');
 var TodoActions = require('../actions/TodoActions');
 
 var TodoTextInput = React.createClass({
+	getInitialState: function() {
+		return {
+			value: this.props.value || ''
+		};
+	},
+
 	render: function() {
 		return (
 			<input
@@ -16,5 +22,20 @@ var TodoTextInput = React.createClass({
 				autoFocus={true}
 			/>
 		);
+	},
+
+	_onChange: function(e) {
+		this.setState({
+			value: e.target.value
+		});
+	},
+
+	_save: function() {
+		this.props.onSave(this.state.value);
+		this.setState({
+			value: ''
+		});
 	}
 });
+
+module.exports = TodoTextInput;

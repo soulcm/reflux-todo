@@ -13,6 +13,10 @@
 		"reflux"
 	],
 	"author": "soulcm",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:soulcm/reflux-todo.git"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"css-loader": "~0.16.0",

@@ -1,8 +1,12 @@
 var React = require('react');
+var Reflux = require('reflux');
 
+var TodoStores = require('../stores/TodoStores');
 var Header = require('./Header');
 
 var TodoApp = React.createClass({
+	mixins: [Reflux.connect(TodoStores,"list")],
+	
 	render: function() {
 		return (
 			<div>
