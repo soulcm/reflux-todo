@@ -5,8 +5,11 @@ var TodoActions = require('../actions/TodoActions');
 
 var TodoMain = React.createClass({
 	render: function() {
+		var todos = this.props.todoState.list;
+		if (todos.length < 1) {
+			return null;
+		}
 		var bAllComplete = !!this.props.todoState.bAllComplete;
-		var todos = this.props.todoState.list
 		return (
 			<section id="main">
 				<input

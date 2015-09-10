@@ -16,6 +16,7 @@ var TodoItem = React.createClass({
 		var input;
 		if (this.state.isEditing) {
 			input = <TodoTextInput
+				ref="editInput"
 				className="edit"
           		onSave={this._onSave}
           		value={todo.text}
@@ -46,7 +47,11 @@ var TodoItem = React.createClass({
 	},
 
 	_onDoubleClick: function() {
-		this.setState({isEditing: true});
+		this.setState({
+			isEditing: true
+		}, function() {
+			this.refs.editInput.getDOMNode().value = this.refs.editInput.getDOMNode().value;
+		});
 	},
 
 	_onDestroyClick: function() {
@@ -57,8 +62,13 @@ var TodoItem = React.createClass({
 		TodoActions.toggleItem(this.props.todo.id);
 	},
 
-	_onSave: function() {
-		this.setState({isEditing: false});
+	_onSave: function(txt) {
+		if (txt.trim()) {
+			TodoActions.editItem(this.props.todo.id, txt);
+		}
+		this.setState({
+			isEditing: false
+		});
 	}
 });
 

@@ -18,8 +18,10 @@ var TodoStores = Reflux.createStore({
 		this.updateList(this._todoList);
 	},
 
-	onEditItem: function(id) {
-
+	onEditItem: function(id, txt) {
+		var index = this._getIndex(id);
+		this._todoList[index].text = txt;
+		this.updateList(this._todoList);
 	},
 
 	onRemoveItem: function(id) {
@@ -56,7 +58,6 @@ var TodoStores = Reflux.createStore({
 
 	updateList: function(list) {
 		localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-		this._todoList = list;
 		this.trigger({
 			list: this._todoList,
 			bAllComplete: this._areAllComplete()
