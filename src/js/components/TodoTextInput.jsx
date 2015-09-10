@@ -2,6 +2,8 @@ var React = require('react');
 
 var TodoActions = require('../actions/TodoActions');
 
+var ENTER_KEY_CODE = 13;
+
 var TodoTextInput = React.createClass({
 	getInitialState: function() {
 		return {
@@ -28,6 +30,12 @@ var TodoTextInput = React.createClass({
 		this.setState({
 			value: e.target.value
 		});
+	},
+
+	_onKeyDown: function(e) {
+		if(e.keyCode === ENTER_KEY_CODE) {
+			this._save();
+		}
 	},
 
 	_save: function() {

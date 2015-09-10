@@ -1,34 +1,35 @@
 {
-	"name": "react-reflux-todo",
-	"version": "0.0.1",
-	"description": "webpack+react+reflux+router",
-	"scripts": {
-		"prestart": "webpack",
-		"start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --port 3000",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"todo",
-		"react",
-		"reflux"
-	],
-	"author": "soulcm",
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:soulcm/reflux-todo.git"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"css-loader": "~0.16.0",
-		"file-loader": "^0.8.4",
-		"jsx-loader": "~0.13.2",
-		"react": "~0.13.3",
-		"react-hot-loader": "^1.3.0",
-		"react-router": "~0.13.3",
-		"reflux": "~0.2.12",
-		"style-loader": "~0.12.3",
-		"url-loader": "^0.5.6",
-		"webpack": "~1.11.0",
-		"webpack-dev-server": "~1.10.1"
-	}
+  "name": "react-reflux-todo",
+  "version": "0.0.1",
+  "description": "webpack+react+reflux+router",
+  "scripts": {
+    "prestart": "webpack",
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "react",
+    "reflux"
+  ],
+  "author": "soulcm",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:soulcm/reflux-todo.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "classnames": "^2.1.3",
+    "css-loader": "~0.16.0",
+    "file-loader": "^0.8.4",
+    "jsx-loader": "~0.13.2",
+    "react": "~0.13.3",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "~0.13.3",
+    "reflux": "~0.2.12",
+    "style-loader": "~0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "~1.11.0",
+    "webpack-dev-server": "~1.10.1"
+  }
 }
