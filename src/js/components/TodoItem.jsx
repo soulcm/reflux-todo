@@ -1,10 +1,15 @@
 var React = require('react');
+var ReactPropTypes = React.PropTypes;
 var classNames = require('classnames');
 
 var TodoTextInput = require('./TodoTextInput');
 var TodoActions = require('../actions/TodoActions');
 
 var TodoItem = React.createClass({
+	propTypes: {
+	    todo: ReactPropTypes.object.isRequired
+	},
+
 	getInitialState: function() {
 		return {
 			isEditing: false

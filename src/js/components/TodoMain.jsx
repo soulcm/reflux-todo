@@ -1,9 +1,14 @@
 var React = require('react');
+var ReactPropTypes = React.PropTypes;
 
 var TodoItem = require('./TodoItem');
 var TodoActions = require('../actions/TodoActions');
 
 var TodoMain = React.createClass({
+	propTypes: {
+		todoState: ReactPropTypes.object.isRequired
+	},
+
 	render: function() {
 		var todos = this.props.todoState.list;
 		if (todos.length < 1) {

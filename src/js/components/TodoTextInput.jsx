@@ -1,10 +1,18 @@
 var React = require('react');
-
+var ReactPropTypes = React.PropTypes;
 var TodoActions = require('../actions/TodoActions');
 
 var ENTER_KEY_CODE = 13;
 
 var TodoTextInput = React.createClass({
+	propTypes: {
+	    className: ReactPropTypes.string,
+	    id: ReactPropTypes.string,
+	    placeholder: ReactPropTypes.string,
+	    onSave: ReactPropTypes.func.isRequired,
+	    value: ReactPropTypes.string
+	},
+
 	getInitialState: function() {
 		return {
 			value: this.props.value || ''
