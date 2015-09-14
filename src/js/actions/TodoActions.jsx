@@ -5,7 +5,8 @@ var TodoActions = Reflux.createActions([
 	'editItem',
 	'removeItem',
 	'toggleAll',
-	'toggleItem'
+	'toggleItem',
+	'clearCompleted'
 ]);
 
 module.exports = TodoActions;

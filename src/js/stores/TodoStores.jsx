@@ -43,6 +43,13 @@ var TodoStores = Reflux.createStore({
 		this.updateList(this._todoList);
 	},
 
+	onClearCompleted: function() {
+		var list = this._todoList.filter(function(item) {
+			return !item.bComplete;
+		});
+		this.updateList(this._todoList = list);
+	},
+
 	getInitialState: function() {
 		var localList = localStorage.getItem(STORAGE_KEY);
 		if (!localList) {

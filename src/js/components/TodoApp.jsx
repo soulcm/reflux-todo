@@ -4,6 +4,7 @@ var Reflux = require('reflux');
 var TodoStores = require('../stores/TodoStores');
 var Header = require('./Header');
 var TodoMain = require('./TodoMain');
+var Footer = require('./Footer');
 
 function getTodoState() {
 	return {
@@ -23,6 +24,7 @@ var TodoApp = React.createClass({
 					<TodoMain
 						todoState={this.state.todoState}
 					/>
+					<Footer todoState={this.state.todoState} />
 				</section>
 				<footer id="info">
 					<p>Double-click to edit a todo</p>
