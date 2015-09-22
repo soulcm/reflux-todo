@@ -1,5 +1,8 @@
 var React = require('react');
+var Router = require('react-router');
 var ReactPropTypes = React.PropTypes;
+
+var Link = Router.Link;
 
 var TodoActions = require('../actions/TodoActions');
 
@@ -39,6 +42,17 @@ var Footer = React.createClass({
 					</strong>
 					{itemsLeftPhrase}
 				</span>
+				<ul id="filters">
+				    <li>
+				        <Link activeClassName="selected" to="All">All</Link>
+				    </li>
+				    <li>
+				        <Link activeClassName="selected" to="Active">Active</Link>
+				    </li>
+				    <li>
+				        <Link activeClassName="selected" to="Completed">Completed</Link>
+				    </li>
+				</ul>
 				{clearCompletedButton}
 			</footer>
 		);

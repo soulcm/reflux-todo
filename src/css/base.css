@@ -341,6 +341,7 @@ label[for='toggle-all'] {
 
 #filters li {
 	display: inline;
+	margin: 5px;
 }
 
 #filters li a {
