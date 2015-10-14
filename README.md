@@ -18,7 +18,6 @@
 1. npm install  
 2. npm install -g webpack webpack-dev-server  
 3. npm start  
-4. 浏览器打开127.0.0.1:3000/bundle
 
 **参考资料**
 
